@@ -11,3 +11,50 @@ h1{
     text-transform: uppercase;
     padding-top: 1em;
 }
+
+img {
+    vertical-align: middle;
+}
+
+.inline-block-center div {
+    display: inline-block;
+    text-align: left;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+
+nav {
+    width: 100%;
+    padding-top: 20px;
+    text-align:right;
+}
+
+nav a {
+    display: inline;
+    /*We're just setting up fonts settings here*/
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#606060;
+    font-size:0.8em;
+    letter-spacing:0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    /*Padding Our Box*/
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    
+}
+
+nav a:hover {
+    background-color: #eeeeee
+}
+
+#logo {
+
+}
