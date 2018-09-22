@@ -2,51 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yazad Dhunjisha</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="shortcut icon" type="image/png" href="/images/general/favicon.png"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
-<style>
-    .content {
-        max-width: 960px;
-        margin: auto;
-    }
-</style>
+
 <body>
-    <nav>
-        <a href = "index.html">DESIGN</a>
-        <a href = "photography.html">PHOTOGRAPHY</a>
-        <a href = "about.html">ABOUT</a>
-    </nav>
+    <div class="Navbar">
+        <div class="Navbar__Link Navbar__Link--brand">
+            <img src="images/general/logo.png" alt="Logo" width="50">
+        </div>
+
+        <div class="Navbar__Link Navbar__Link--toggle" onclick="classToggle()">
+            <span style="font-size: 1.8em; color: #888888;">
+                    <i class="fas fa-bars"></i>
+            </span>
+        </div>
+
+        <nav class="Navbar__Items Navbar__Items--right">
+            <div class="Navbar__Link">
+                <a href="index.html">Design</a>
+            </div>
+            <div class="Navbar__Link">
+                <a href="photography.html">Photography</a>
+            </div>
+            <div class="Navbar__Link">
+                <a href="about.html">About</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="Navbar-Hamburger">
+        <nav class="Navbar__Items Navbar__Items--right">
+            <div class="Navbar__Link">
+                <a href="index.html">Design</a>
+            </div>
+            <div class="Navbar__Link">
+                <a href="photography.html">Photography</a>
+            </div>
+            <div class="Navbar__Link">
+                <a href="about.html">About</a>
+            </div>
+        </nav>
+    </div>
 
     <div class="content">
-        <h1>Product Design</h1>
+        <div class="center">
+            <h1>Product Design</h1>
 
-    
-        <div class="center">
             <img src="images/product-design/1-clothing-organiser.jpg" alt="Clothing Organiser Concept" width="945"><br>
-        </div>
-        <div class="center">
             <img src="images/product-design/2-slack-tasks.jpg" alt="Slack Task Manager Concept" width="293">
             <img src="images/product-design/3-polaris.jpg" alt="Polaris Scheduler" width="293">
             <img src="images/product-design/4-phase.jpg" alt="Phase News" width="293">
+
+            <h1>Game Design</h1>
+
+            <img src="images/product-design/5-game-ice-fire.jpg" alt="A Game of Ice and Fire" width="945">
+
+            <h1>Branding &amp; Graphic Design</h1>
+
+            <img src="images/product-design/6-mhacks.jpg" alt="MHacks" width="456">
+            <img src="images/product-design/7-mpowered.jpg" alt="MPowered Entrepreneurship" width="456">
+
+            <h1>Tidbits</h1>
+
+            <img src="images/product-design/8-f-type.jpg" alt="Low-Poly Vehicles" width="456">
+            <img src="images/product-design/9-bahrain-posters.jpg" alt="Bahrain Posters" width="456"><br>
+            <a href="city_badges.html"><img src="images/product-design/10-city-badges.jpg" alt="City Badges" width="945"></a>
         </div>
-
-        <h1>Game Design</h1>
-
-        <img src="images/product-design/5-game-ice-fire.jpg" alt="A Game of Ice and Fire" width="945">
-
-        <h1>Branding &amp; Graphic Design</h1>
-
-        <img src="images/product-design/6-mhacks.jpg" alt="MHacks" width="456">
-        <img src="images/product-design/7-mpowered.jpg" alt="MPowered Entrepreneurship" width="456">
-
-        <h1>Tidbits</h1>
-
-        <img src="images/product-design/8-f-type.jpg" alt="Low-Poly Vehicles" width="456">
-        <img src="images/product-design/9-bahrain-posters.jpg" alt="Bahrain Posters" width="456"><br>
-        <img src="images/product-design/10-city-badges.jpg" alt="City Badges" width="945">
     </div>
+
+    <script>
+        var HamburgerShowing = false;
+
+        function classToggle() {
+            HamburgerShowing = !HamburgerShowing;
+            const navs = document.querySelectorAll('.Navbar__Items')
+
+            navs.forEach(nav => nav.classList.toggle('Navbar__ToggleShow'));
+            document.querySelector('.Navbar-Hamburger').style.left=HamburgerShowing?"calc(100vw - 150px)":"100vw";
+        }
+    </script>
 
 </body>
 </html>

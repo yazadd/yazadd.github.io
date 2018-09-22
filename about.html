@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yazad Dhunjisha</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="/images/general/favicon.png"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="Navbar">
+            <div class="Navbar__Link Navbar__Link--brand">
+                <img src="images/general/logo.png" alt="Logo" width="50">
+            </div>
+    
+            <div class="Navbar__Link Navbar__Link--toggle" onclick="classToggle()">
+                <span style="font-size: 1.8em; color: #888888;">
+                        <i class="fas fa-bars"></i>
+                </span>
+            </div>
+    
+            <nav class="Navbar__Items Navbar__Items--right">
+                <div class="Navbar__Link">
+                    <a href="index.html">Design</a>
+                </div>
+                <div class="Navbar__Link">
+                    <a href="photography.html">Photography</a>
+                </div>
+                <div class="Navbar__Link">
+                    <a href="about.html">About</a>
+                </div>
+            </nav>
+        </div>
+    
+        <div class="Navbar-Hamburger">
+            <nav class="Navbar__Items Navbar__Items--right">
+                <div class="Navbar__Link">
+                    <a href="index.html">Design</a>
+                </div>
+                <div class="Navbar__Link">
+                    <a href="photography.html">Photography</a>
+                </div>
+                <div class="Navbar__Link">
+                    <a href="about.html">About</a>
+                </div>
+            </nav>
+        </div>
+
+
+
+
+    <div>
+        <div class="content">
+            <h1>About</h1>
+            <img src="images/about/me.jpg" alt="Photo of me in a white shirt and grey waistcoat, leaning against a column" width="300">
+            <p>I’m Yazad, a pixel-pusher with an eye for detail. I’m a designer with a background in engineering, who dabbles in the space between those two disciplines. I design to elevate experiences, to engage people, and to pay rent. If you're interested in working with me or just talking, feel free to reach out!</p>
+        </div>
+    </div>
+
+    <script>
+        var HamburgerShowing = false;
+
+        function classToggle() {
+            HamburgerShowing = !HamburgerShowing;
+            const navs = document.querySelectorAll('.Navbar__Items')
+
+            navs.forEach(nav => nav.classList.toggle('Navbar__ToggleShow'));
+            document.querySelector('.Navbar-Hamburger').style.left=HamburgerShowing?"calc(100vw - 150px)":"100vw";
+        }
+    </script>
+
+</body>
+</html>
