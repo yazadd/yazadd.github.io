@@ -1,0 +1,127 @@
+body {
+    font-size: 100%;
+    margin:0;
+}
+
+h1 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#606060;
+    font-size:2em;
+    letter-spacing:0.04em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 1em;
+}
+
+p {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#606060;
+    font-size:1em;
+    letter-spacing:0.04em;
+    text-align: left;
+}
+
+.content {
+    max-width: 960px;
+    margin: auto;
+}
+
+.center {
+    text-align: center;
+}
+
+.center img {
+    margin: 9px 11px;
+
+    transition: transform 200ms ease-in-out;
+    transform: scale(1);
+}
+
+.center img:hover {
+    transform: scale(0.95);
+}
+
+
+.navbar {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#888888;
+    font-size:0.8em;
+    letter-spacing:0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.navbarHamburger {
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 100vw;
+    height:100vh;
+    align-items: center;
+    padding: 16px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#888888;
+    font-size:0.8em;
+    letter-spacing:0.12em;
+    line-height: 2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: left 200ms ease-out;
+    z-index: 1000
+}
+.navbarLink {
+    padding-right: 24px;
+    text-decoration: none;
+}
+.navbarLinkCurrent {
+    padding-right: 24px;
+    text-decoration: none;
+    color:#158DB4;
+}
+.navbarItems {
+    display: flex;
+}
+.navbarItems a {
+    text-decoration: none;
+    color:#888888;
+}
+.navbarItemsRight {
+    margin-left:auto;
+}
+.navbarLinkToggle {
+    display: none;
+    font-size: 1.8em; 
+    color: #888888;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbarItems,
+    .navbar {
+        justify-content: space-between;
+
+    }
+    .navbar .navbarItems {
+        display:none;
+    }
+    .navbarHamburger .navbarItems {
+        flex-direction: column;
+    }
+    .navbarItemsRight {
+        margin-left:0;
+    }
+    .navbarToggleShow {
+        display: flex;
+    }
+    .navbarLinkToggle {
+        /* align-self: flex-end; */
+        display: initial;
+        /* position: absolute; */
+        cursor: pointer;
+        align-items: center;
+    }
+}
