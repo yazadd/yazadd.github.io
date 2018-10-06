@@ -12,7 +12,7 @@
 <body>
     <div class="navbar">
         <div class="navbarLink">
-            <a href="index.html"><img src="images/general/logo.png" alt="Logo" width="50"></a>
+            <a href="index.html"><img src="images/general/logo.png" alt="My Personal Logo" width="50"></a>
         </div>
 
         <div class="navbarLink navbarLinkToggle" onclick="classToggle()">
@@ -80,10 +80,10 @@
 
         function classToggle() {
             HamburgerShowing = !HamburgerShowing;
-            const navs = document.querySelectorAll('.Navbar__Items')
+            const navs = document.querySelectorAll('.navbarItems')
 
-            navs.forEach(nav => nav.classList.toggle('Navbar__ToggleShow'));
-            document.querySelector('.Navbar-Hamburger').style.left=HamburgerShowing?"calc(100vw - 150px)":"100vw";
+            navs.forEach(nav => nav.classList.toggle('navbarToggleShow'));
+            document.querySelector('.navbarHamburger').style.left=HamburgerShowing?"calc(100vw - 150px)":"100vw";
         }
     </script>
 
