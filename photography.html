@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yazad Dhunjisha</title>
+    <link rel="stylesheet" type="text/css" href="/styles/reset.css">
     <link rel="stylesheet" type="text/css" href="/styles/style.css">
     <link rel="shortcut icon" type="image/png" href="/images/general/favicon.png"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -49,7 +50,7 @@
     </div>
 
 
-    <div>
+    <div role="main">
         <h1>Photography</h1>
 
         <div class="center">
@@ -71,10 +72,10 @@
 
         function classToggle() {
             HamburgerShowing = !HamburgerShowing;
-            const navs = document.querySelectorAll('.Navbar__Items')
+            const navs = document.querySelectorAll('.navbarItems')
 
-            navs.forEach(nav => nav.classList.toggle('Navbar__ToggleShow'));
-            document.querySelector('.Navbar-Hamburger').style.left=HamburgerShowing?"calc(100vw - 150px)":"100vw";
+            navs.forEach(nav => nav.classList.toggle('navbarToggleShow'));
+            document.querySelector('.navbarHamburger').style.left=HamburgerShowing?"calc(100vw - 150px)":"100vw";
         }
     </script>
 

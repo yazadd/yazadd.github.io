@@ -22,6 +22,8 @@ p {
     font-size:1em;
     letter-spacing:0.04em;
     text-align: left;
+    line-height: 1.2em;
+    max-width: 65ch;
 }
 
 .content {
@@ -113,6 +115,20 @@ p {
     color: #888888;
 }
 
+.aboutHeroImage {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: url("/images/headers/about-header.jpg");
+
+    /* Set a specific height */
+    height: 250px;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center -140px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
 @media only screen and (max-width: 768px) {
     .navbarItems,
     .navbar {
@@ -140,16 +156,40 @@ p {
     }
 }
 
-.aboutHeroImage {
-    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: url("/images/headers/about-header.jpg");
+@media screen and (-ms-high-contrast: active) {
+    h1 {
+        color:#000000;
+    }
+    
+    p {
+        color:#000000;
+        line-height: 1.5em;
+    }
+  }
 
-    /* Set a specific height */
-    height: 250px;
+@media only screen and (max-width: 768px) {
+    .navbarItems,
+    .navbar {
+        justify-content: space-between;
 
-    /* Position and center the image to scale nicely on all screens */
-    background-position: center -140px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+    }
+    .navbar .navbarItems {
+        display:none;
+    }
+    .navbarHamburger .navbarItems {
+        flex-direction: column;
+    }
+    .navbarItemsRight {
+        margin-left:0;
+    }
+    .navbarToggleShow {
+        display: flex;
+    }
+    .navbarLinkToggle {
+        /* align-self: flex-end; */
+        display: initial;
+        /* position: absolute; */
+        cursor: pointer;
+        align-items: center;
+    }
 }
