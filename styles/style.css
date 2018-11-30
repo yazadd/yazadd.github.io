@@ -34,6 +34,14 @@ p {
     flex-wrap: wrap;
 }
 
+.designImages {
+    max-width: 960px;
+    margin: auto;
+    /* display:flex;
+    flex-direction: column;
+    flex-wrap: wrap; */
+}
+
 .content img {
     flex-shrink: 1;
     max-width: 100%;
@@ -90,21 +98,18 @@ p {
     transition: left 200ms ease-out;
     z-index: 1000
 }
-.navbarLink {
+.navbarLink a {
     padding-right: 24px;
     text-decoration: none;
+    color:#888888;
 }
-.navbarLinkCurrent {
+.navbarLinkCurrent a {
     padding-right: 24px;
     text-decoration: none;
     color:#158DB4;
 }
 .navbarItems {
     display: flex;
-}
-.navbarItems a {
-    text-decoration: none;
-    color:#888888;
 }
 .navbarItemsRight {
     margin-left:auto;
