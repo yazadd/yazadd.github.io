@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:500');
+
+.buttonDiv {
+    text-align: center;
+}
+
+.button {
+    font-size: 1em;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 500;
+    color: #127ea2;
+    display: inline-block;
+    border: 0;
+    margin: 30px 6px;
+    padding: 0.7em;
+    cursor: pointer;
+    text-align: center;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+}
+.button:hover,
+.button:focus {
+    opacity: 0.6;
+}
+.btcolor:hover,
+.btcolor:focus {
+    background: #ff6666;
+    color: #f0f0f0;
+}
+.round {
+    border-radius: 0.6em;
+}
+.border {
+    border: 1.5px solid #127ea2;
+}
