@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slack Task Manager – Yazad Dhunjisha</title>
+    <link rel="stylesheet" type="text/css" href="/styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
+    <link rel="shortcut icon" type="image/png" href="/images/general/favicon.png"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<body>
+    <a class="skip-main" href="#slackTasks">Skip to main content</a>
+
+    <div class="navbar" role="navigation">
+        <div class="navbarLink">
+            <a href="index.html"><img src="/images/general/logo.png" alt="My Personal Logo" width="50"></a>
+        </div>
+    
+        <div class="navbarLink navbarLinkToggle" onclick="classToggle()">
+            <span>
+                <i class="fas fa-bars"></i>
+            </span>
+        </div>
+    
+        <nav class="navbarItems navbarItemsRight">
+            <div class="navbarLink">
+                <a href="/index.html">Design</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/photography.html">Photography</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/about.html">About</a>
+            </div>
+        </nav>
+    </div>
+    
+    <div class="navbarHamburger" role="navigation">
+        <nav class="navbarItems navbarItemsRight">
+            <div class="navbarLink">
+                <a href="/index.html">Design</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/photography.html">Photography</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/about.html">About</a>
+            </div>
+        </nav>
+    </div>
+
+
+    <div>
+        <div class="designImages" role="main" id="slackTasks">
+            <h1>Slack Task Manager Concept</h1><br>
+            <img src="/images/slack-tasks/slack_tasks_01.jpg" alt="Slack Tasks Banner" width="900">
+            <p>
+                <br><i>Preface: This design challenge was part of the KPCB Design Fellows application. I am not a designer at Slack.</i>
+            </p>
+            <h2>The Problem</h2>
+            <p>
+                Slack lets teams of any size communicate in ways that email never allowed for, boosting their productivity and helping
+                them reach their goals faster. However, Slack doesn’t afford its users any way of visualising these goals or
+                designating tasks to specific users and sub-teams. Existing task organisers such as Todoist and Trello have Slack Apps,
+                but these are limited in functionality and still require the user to switch to the native apps to be productive. For
+                example, the Todoist Slack App only allows users to create tasks. Additionally, both of these apps rely almost
+                exclusively on text input which, while efficient for task creation, is not ideal for editing existing tasks.
+            </p>
+            <p>
+                I chose to design this feature for Slack as, in my role as a director of MHacks, I need to allocate tasks to over 30
+                people at a time across a variety of sub-teams. Our Logistics-UX team, for example, has 14 sub-teams each with their
+                own set of tasks. As a result, we’ve had issues with clearly communicating responsibilities and tracking our progress
+                towards our goals. We’ve used everything from Google Docs to Slack Posts to assign tasks to our members, but these have
+                had limited success for a few reasons. First, neither is easily accessible from Slack at any time—even pinned Slack
+                Posts get lost in the sea of information our Slack team encounters on the daily. Second, neither offers a convenient
+                way to assign tasks to users. Third, they both lack any sort of notification or reminder system to help users stay on
+                track, so it’s up to the user to continuously check on their deliverables.
+
+            </p>
+
+            <h2>My Solution</h2>
+            <p>
+                My solution sits in the same space as channel information and user profiles—in a pane on the right of the Slack app.
+                It’s a chronologically-ordered todo list specific to the current channel being displayed. This allows teams within an
+                organisation to separate their responsibilities. Tasks can be added from this pane or from the Slack message field and
+                can be assigned to individual users or user groups. Tasks can also be given due dates and times, which will appear to
+                the right of each task and be colour-coded according to their proximity to the current date. Task creation will use
+                natural language processing to parse the input and find due dates and times, and Slackbot will use this information to
+                remind users of upcoming and overdue tasks.
+
+            </p>
+            <img src="/images/slack-tasks/slack_tasks_02.png" alt="Tasks Screen" width="1000">
+            <img src="/images/slack-tasks/slack_tasks_03.png" alt="Add Task Screen" width="1000">
+            <img src="/images/slack-tasks/slack_tasks_04.png" alt="Message Bar Interaction" width="1000">
+            <img src="/images/slack-tasks/slack_tasks_05.gif" alt="Overdue Task Reminder" width="1000">
+
+            <h2>Next Steps</h2>
+            <p>
+                I intentionally kept the task features minimal because I wanted to keep the barrier to entry of usability low, and
+                because the limited real estate afforded by using Slack's right-pane means that an abundance of features could easily
+                result in a cluttered interface. That being said, I’d love the opportunity to user-test this implementation and do
+                research to gain an understanding of what features users desire the most. These features could include priority levels
+                for tasks and sorting based on priority, for example.
+            </p>
+            <p>
+                Additionally, the current implementation is based on the way my various Slack teams set-up channels—by creating a new
+                channel for each sub-team. As such, the task list is specific to each channel and clicking on a different channel will
+                change the task list being displayed. Were a Slack team to set-up channels in a different way, this implementation
+                wouldn't be ideal for them. This would be another user behaviour I'd like to test for or gather data on.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        var HamburgerShowing = false;
+
+        function classToggle() {
+            HamburgerShowing = !HamburgerShowing;
+            const navs = document.querySelectorAll('.navbarItems')
+
+            navs.forEach(nav => nav.classList.toggle('navbarToggleShow'));
+            document.querySelector('.navbarHamburger').style.left=HamburgerShowing?"calc(100vw - 150px)":"100vw";
+        }
+    </script>
+
+    <footer>
+        <a href="mailto: yazadd@umich.edu" aria-label="Email"><i class="far fa-envelope-open"></i></a>
+        <a href="https://www.linkedin.com/in/yazadd/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <p>©
+            <script type="text/JavaScript"> document.write(new Date().getFullYear()); </script>, Yazad Dhunjisha</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Game of Ice and Fire – Yazad Dhunjisha</title>
+    <link rel="stylesheet" type="text/css" href="/styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
+    <link rel="shortcut icon" type="image/png" href="/images/general/favicon.png"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<body>
+    <a class="skip-main" href="#gameIceFire">Skip to main content</a>
+
+    <div class="navbar" role="navigation">
+        <div class="navbarLink">
+            <a href="index.html"><img src="/images/general/logo.png" alt="My Personal Logo" width="50"></a>
+        </div>
+    
+        <div class="navbarLink navbarLinkToggle" onclick="classToggle()">
+            <span>
+                <i class="fas fa-bars"></i>
+            </span>
+        </div>
+    
+        <nav class="navbarItems navbarItemsRight">
+            <div class="navbarLink">
+                <a href="/index.html">Design</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/photography.html">Photography</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/about.html">About</a>
+            </div>
+        </nav>
+    </div>
+    
+    <div class="navbarHamburger" role="navigation">
+        <nav class="navbarItems navbarItemsRight">
+            <div class="navbarLink">
+                <a href="/index.html">Design</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/photography.html">Photography</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/about.html">About</a>
+            </div>
+        </nav>
+    </div>
+
+
+    <div>
+        <div class="designImages" role="main" id="gameIceFire">
+            <h1>A Game of Ice and Fire</h1>
+            <p>
+                A Game of Ice and Fire is a two-player platform game designed to help children with Autism Spectrum Disorder (ASD) by
+                encouraging communication, cooperation, and planning during gameplay, thus targeting the social skills that ASD often
+                impairs. It was developed using GameMaker Studio, with the help of 3 other students, for our ENGR 100.650 class.
+            </p>
+
+            <img src="/images/game-ice-fire/game_ice_fire_01.jpg" alt="Level 1" width="400">
+            <img src="/images/game-ice-fire/game_ice_fire_02.jpg" alt="Level 2" width="400">
+            <img src="/images/game-ice-fire/game_ice_fire_03.jpg" alt="Level 3" width="900">
+            <img src="/images/game-ice-fire/game_ice_fire_04.jpg" alt="Level 4" width="900">
+            <img src="/images/game-ice-fire/game_ice_fire_05.jpg" alt="Home Screen" width="300">
+            <img src="/images/game-ice-fire/game_ice_fire_06.jpg" alt="Paused Screen" width="300">
+            <img src="/images/game-ice-fire/game_ice_fire_07.jpg" alt="Settings Screen" width="300">
+            <img src="/images/game-ice-fire/game_ice_fire_08.jpg" alt="Instructions 1" width="400">
+            <img src="/images/game-ice-fire/game_ice_fire_09.jpg" alt="Instructions 2" width="400">
+
+        </div>
+    </div>
+
+    <script>
+        var HamburgerShowing = false;
+
+        function classToggle() {
+            HamburgerShowing = !HamburgerShowing;
+            const navs = document.querySelectorAll('.navbarItems')
+
+            navs.forEach(nav => nav.classList.toggle('navbarToggleShow'));
+            document.querySelector('.navbarHamburger').style.left=HamburgerShowing?"calc(100vw - 150px)":"100vw";
+        }
+    </script>
+    
+    <footer>
+        <a href="mailto: yazadd@umich.edu" aria-label="Email"><i class="far fa-envelope-open"></i></a>
+        <a href="https://www.linkedin.com/in/yazadd/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <p>©
+            <script type="text/JavaScript"> document.write(new Date().getFullYear()); </script>, Yazad Dhunjisha</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahrain Posters – Yazad Dhunjisha</title>
+    <link rel="stylesheet" type="text/css" href="/styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
+    <link rel="shortcut icon" type="image/png" href="/images/general/favicon.png"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<body>
+    <a class="skip-main" href="#bahrainPosters">Skip to main content</a>
+
+    <div class="navbar" role="navigation">
+        <div class="navbarLink">
+            <a href="index.html"><img src="/images/general/logo.png" alt="My Personal Logo" width="50"></a>
+        </div>
+    
+        <div class="navbarLink navbarLinkToggle" onclick="classToggle()">
+            <span>
+                <i class="fas fa-bars"></i>
+            </span>
+        </div>
+    
+        <nav class="navbarItems navbarItemsRight">
+            <div class="navbarLink">
+                <a href="/index.html">Design</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/photography.html">Photography</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/about.html">About</a>
+            </div>
+        </nav>
+    </div>
+    
+    <div class="navbarHamburger" role="navigation">
+        <nav class="navbarItems navbarItemsRight">
+            <div class="navbarLink">
+                <a href="/index.html">Design</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/photography.html">Photography</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/about.html">About</a>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="designImages" role="main" id="bahrainPosters">
+        <h1>Bahrain Posters</h1>
+        <p>This is a set of posters of some of my favourite buildings and structures from my home, heavily inspired by <a href="https://linxsupply.com/" target="_blank">Linx Supply's</a> Dubai poster.</p>
+        <span>
+            <img src="/images/bahrain-posters/bahrain-financial-harbour.png" alt="Poster of the silhoutte of the Bahrain Financial Harbour against a sunset" width="300">
+            <img src="/images/bahrain-posters/pearl-roundabout.png" alt="Poster of the silhoutte of the Pearl Roundabout against a sunset" width="300">
+            <img src="/images/bahrain-posters/world-trade-center.png" alt="Poster of the silhoutte of the World Trade Center against a sunset" width="300">
+        </span>
+    </div>
+
+    <script>
+        var HamburgerShowing = false;
+
+        function classToggle() {
+            HamburgerShowing = !HamburgerShowing;
+            const navs = document.querySelectorAll('.navbarItems')
+
+            navs.forEach(nav => nav.classList.toggle('navbarToggleShow'));
+            document.querySelector('.navbarHamburger').style.left=HamburgerShowing?"calc(100vw - 150px)":"100vw";
+        }
+    </script>
+
+    <footer>
+        <a href="mailto: yazadd@umich.edu" aria-label="Email"><i class="far fa-envelope-open"></i></a>
+        <a href="https://www.linkedin.com/in/yazadd/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <p>©
+            <script type="text/JavaScript"> document.write(new Date().getFullYear()); </script>, Yazad Dhunjisha</p>
+    </footer>
+
+</body>
+</html>

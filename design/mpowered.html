@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPowered – Yazad Dhunjisha</title>
+    <link rel="stylesheet" type="text/css" href="/styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
+    <link rel="shortcut icon" type="image/png" href="/images/general/favicon.png"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<body>
+    <a class="skip-main" href="#mpowered">Skip to main content</a>
+
+    <div class="navbar" role="navigation">
+        <div class="navbarLink">
+            <a href="index.html"><img src="/images/general/logo.png" alt="My Personal Logo" width="50"></a>
+        </div>
+    
+        <div class="navbarLink navbarLinkToggle" onclick="classToggle()">
+            <span>
+                <i class="fas fa-bars"></i>
+            </span>
+        </div>
+    
+        <nav class="navbarItems navbarItemsRight">
+            <div class="navbarLink">
+                <a href="/index.html">Design</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/photography.html">Photography</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/about.html">About</a>
+            </div>
+        </nav>
+    </div>
+    
+    <div class="navbarHamburger" role="navigation">
+        <nav class="navbarItems navbarItemsRight">
+            <div class="navbarLink">
+                <a href="/index.html">Design</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/photography.html">Photography</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/about.html">About</a>
+            </div>
+        </nav>
+    </div>
+
+
+    <div>
+        <div class="designImages" role="main" id="mpowered">
+            <h1>MPowered</h1>
+            <p>
+                In my role as the Director of MPowered's Creative Team, I was responsible for managing a team of 5 designers ('talent
+                members') who produced promotional material for the University of Michigan's largest student-run entrepreneurial
+                organisation. I also continued to design for MPowered's six projects, a task I has carried on from my days as an
+                MPowered talent member. Learn more about MPowered at <a href="https://mpowered.umich.edu/" target="_blank">mpowered.umich.edu</a>.
+            </p>
+
+            <img src="/images/mpowered/mpowered_01.jpg" alt="Coming Soon Poster 1" width="400">
+            <img src="/images/mpowered/mpowered_02.jpg" alt="Coming Soon Poster 2" width="400">
+            <img src="/images/mpowered/mpowered_03.jpg" alt="Sponsorship Infographic" width="400">
+            <img src="/images/mpowered/mpowered_04.jpg" alt="Makeathon Review Pamphlet 1" width="400">
+            <img src="/images/mpowered/mpowered_05.jpg" alt="Makeathon Review Pamphlet 2" width="400">
+            <img src="/images/mpowered/mpowered_06.jpg" alt="Breathe Blue Logo" width="400">
+
+        </div>
+    </div>
+
+    <script>
+        var HamburgerShowing = false;
+
+        function classToggle() {
+            HamburgerShowing = !HamburgerShowing;
+            const navs = document.querySelectorAll('.navbarItems')
+
+            navs.forEach(nav => nav.classList.toggle('navbarToggleShow'));
+            document.querySelector('.navbarHamburger').style.left=HamburgerShowing?"calc(100vw - 150px)":"100vw";
+        }
+    </script>
+
+    <footer>
+        <a href="mailto: yazadd@umich.edu" aria-label="Email"><i class="far fa-envelope-open"></i></a>
+        <a href="https://www.linkedin.com/in/yazadd/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <p>©
+            <script type="text/JavaScript"> document.write(new Date().getFullYear()); </script>, Yazad Dhunjisha</p>
+    </footer>
+
+</body>
+</html>

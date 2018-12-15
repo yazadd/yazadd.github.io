@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MHacks – Yazad Dhunjisha</title>
+    <link rel="stylesheet" type="text/css" href="/styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
+    <link rel="shortcut icon" type="image/png" href="/images/general/favicon.png"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<body>
+    <a class="skip-main" href="#mhacks">Skip to main content</a>
+
+    <div class="navbar" role="navigation">
+        <div class="navbarLink">
+            <a href="index.html"><img src="/images/general/logo.png" alt="My Personal Logo" width="50"></a>
+        </div>
+    
+        <div class="navbarLink navbarLinkToggle" onclick="classToggle()">
+            <span>
+                <i class="fas fa-bars"></i>
+            </span>
+        </div>
+    
+        <nav class="navbarItems navbarItemsRight">
+            <div class="navbarLink">
+                <a href="/index.html">Design</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/photography.html">Photography</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/about.html">About</a>
+            </div>
+        </nav>
+    </div>
+    
+    <div class="navbarHamburger" role="navigation">
+        <nav class="navbarItems navbarItemsRight">
+            <div class="navbarLink">
+                <a href="/index.html">Design</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/photography.html">Photography</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/about.html">About</a>
+            </div>
+        </nav>
+    </div>
+
+
+    <div>
+        <div class="designImages" role="main" id="mhacks">
+            <h1>MHacks</h1>
+            <p>
+                MHacks is one of the largest hackathons in the nation. The MHacks design team works to design a logo, app, website, and
+                promotional materials for each of our events.
+            </p>
+            <p>
+                As a director of MHacks, I oversaw the design team for MHacks X. As the design lead, I oversaw and worked directly with
+                the team for MHacks 9. For MHacks 8, I worked on the design team, with two other designers.
+            </p>
+            <p>
+                Learn more about MHacks at <a href="https://mhacks.org/" target="_blank">mhacks.org</a>.
+            </p>
+
+            <h2>MHacks 9</h2>
+            <img src="/images/mhacks/mhacks_01.gif" alt="MHacks Web Animation" width="900">
+            <img src="/images/mhacks/mhacks_02.gif" alt="MHacks Live Web Animation" width="400">
+            <img src="/images/mhacks/mhacks_03.gif" alt="MHacks Background Animation" width="400">
+            <img src="/images/mhacks/mhacks_04.jpg" alt="MHacks Web" width="300">
+            <img src="/images/mhacks/mhacks_05.jpg" alt="MHacks Live Web" width="300">
+            <img src="/images/mhacks/mhacks_06.jpg" alt="MHacks Web Details" width="300">
+
+            <h2>MHacks 8</h2>
+            <img src="/images/mhacks/mhacks_07.jpg" alt="ML/AI Banner" width="400">
+            <img src="/images/mhacks/mhacks_08.jpg" alt="VR/AR Banner" width="400">
+            <img src="/images/mhacks/mhacks_09.jpg" alt="MHacks App Schedule" width="400">
+            <img src="/images/mhacks/mhacks_10.jpg" alt="ID Cards" width="400">
+            <img src="/images/mhacks/mhacks_11.jpg" alt="Invoice" width="400">
+            <img src="/images/mhacks/mhacks_12.jpg" alt="Prospectus Page 1" width="400">
+            <img src="/images/mhacks/mhacks_13.jpg" alt="Prospectus Page 2–3" width="900">
+
+        </div>
+    </div>
+
+    <script>
+        var HamburgerShowing = false;
+
+        function classToggle() {
+            HamburgerShowing = !HamburgerShowing;
+            const navs = document.querySelectorAll('.navbarItems')
+
+            navs.forEach(nav => nav.classList.toggle('navbarToggleShow'));
+            document.querySelector('.navbarHamburger').style.left=HamburgerShowing?"calc(100vw - 150px)":"100vw";
+        }
+    </script>
+    
+    <footer>
+        <a href="mailto: yazadd@umich.edu" aria-label="Email"><i class="far fa-envelope-open"></i></a>
+        <a href="https://www.linkedin.com/in/yazadd/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <p>©
+            <script type="text/JavaScript"> document.write(new Date().getFullYear()); </script>, Yazad Dhunjisha</p>
+    </footer>
+
+</body>
+</html>

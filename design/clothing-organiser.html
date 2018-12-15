@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Organiser – Yazad Dhunjisha</title>
+    <link rel="stylesheet" type="text/css" href="/styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
+    <link rel="shortcut icon" type="image/png" href="/images/general/favicon.png"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<body>
+    <a class="skip-main" href="#clothingOrganiser">Skip to main content</a>
+
+    <div class="navbar" role="navigation">
+        <div class="navbarLink">
+            <a href="index.html"><img src="/images/general/logo.png" alt="My Personal Logo" width="50"></a>
+        </div>
+    
+        <div class="navbarLink navbarLinkToggle" onclick="classToggle()">
+            <span>
+                <i class="fas fa-bars"></i>
+            </span>
+        </div>
+    
+        <nav class="navbarItems navbarItemsRight">
+            <div class="navbarLink">
+                <a href="/index.html">Design</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/photography.html">Photography</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/about.html">About</a>
+            </div>
+        </nav>
+    </div>
+    
+    <div class="navbarHamburger" role="navigation">
+        <nav class="navbarItems navbarItemsRight">
+            <div class="navbarLink">
+                <a href="/index.html">Design</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/photography.html">Photography</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/about.html">About</a>
+            </div>
+        </nav>
+    </div>
+
+
+    <div>
+        <div class="designImages" role="main" id="clothingOrganiser">
+            <h1>Clothing Organiser Concept</h1><br>
+            <img src="/images/clothing-organiser/clothing_organiser_01.jpg" alt="Clothing Organiser Concept Banner" width="900">
+            <h2>Context</h2>
+            <h3>Problem</h3>
+            <p>
+                Many people love fashion. Their clothes express themselves—their quirks, their past, their ambitions. However, planning
+                what to wear first thing in the morning can be overwhelming. Those of us with large closets often struggle to remember
+                all the items we have, resulting in only a select-few clothes actually getting used. And as difficult as it can be to
+                choose an outfit for the day, planning outfits for a vacation is even more stressful.
+            </p>
+            <h4>My goal is to design a clothing management app that helps people <b>efficiently</b> and <b>successfully</b> plan an outfit for any occasion.</h4>
+            <h3>Constraints</h3>
+            <p>
+                I chose to design a mobile app rather than a desktop or web app for two main reasons. First, my app is most likely to
+                be used first thing in the morning or last thing in the night. In both of these situations, most users will already be
+                checking their phones, so this app will fit seamlessly into their existing routine. Second, this app will rely on a
+                device with a camera, and a smartphone is better fitted to this type of usage than a laptop.
+            </p>
+            <p>
+                Most people have a mobile platform of choice. Mine is Android, but I decided to design a native iOS app to challenge
+                myself. Additionally, I chose to design for iOS based on <a href="https://www.vertoanalytics.com/apple-iphone-ownership-driven-female-high-income-users/">data</a> that shows that iPhone owners are more likely to be
+                female and have a high-income, and I have hypothesised that such a combination would lead to a greater number of
+                clothes, on average (but I may be wrong!).
+            </p>
+            <h3>Assumptions</h3>
+            <p>
+                I will assume that the app makes money from sponsored products appearing in clothing suggestions. Accordingly, the
+                business goal is app retention. As such, my design goal is to make the experience of categorising your clothes, finding an outfit, and finding clothes that go well with your existing items as easy and delightful as possible, thus
+                increasing conversions. Through relevant outfit suggestions and meaningful purchase recommendations, the user should
+                feel rewarded, encouraging them to return to the app regularly.
+            </p>
+
+            <h2>Understanding Users</h2>
+            <h3>User Research</h3>
+            <p>
+                Listing my goals and assumptions helped me form an idea of who the end user will be. I identified some user behaviours, needs, and goals to form three personas:
+            </p>
+            <ol>
+                <li>
+                    <b>The Worker:</b> People with office jobs may find themselves juggling three tasks at once just to make it out of the door on
+                    time. They want an easy way to decide on what to wear in the mornings, Monday through Friday.
+                </li>
+                <li>
+                    <b>The Shopper:</b> This person has nearly filled up their closet but is showing no signs of slowing down. They’re looking to
+                    round out their collection with pieces that go well with their favourite clothes. They may be comfortable putting
+                    together their outfit on most mornings, but they’re struggling to figure out what to buy next. They want a stream of
+                    recommendations that fill in the gaps in their closet.
+                </li>
+                <li>
+                    <b>The Traveler:</b> This person travels often and hates packing. Whether it’s for a business trip or a quick weekend getaway,
+                    taking the right amount of clothes while planning for the weather at their destination is a constant struggle. They’re
+                    looking to pack light and dress bold, and they don’t want to forget anything.
+                </li>
+            </ol>
+            <h3>Competitive Review</h3>
+            <p>
+                I looked at a variety of apps in this space to try and understand the design decisions they made, including: 
+                <a href="https://www.snupps.com/">Snupps</a>,
+                <a href="http://stuffnstyle.com/">Glamoutfit</a>, and 
+                <a href="http://www.pureple.com/">Pureple</a>.
+            </p>
+            <img src="/images/clothing-organiser/clothing_organiser_02.jpg" alt="Snupps Screenshot" width="200">
+            <img src="/images/clothing-organiser/clothing_organiser_03.jpg" alt="Glamoutfit Screenshot" width="200">
+            <img src="/images/clothing-organiser/clothing_organiser_04.jpg" alt="Pureple Screenshot" width="200">
+
+            <h2>Setting the Stage</h2>
+            <h3>Requirements</h3>
+            <p>I formed a set of requirements that I would use to validate my final design.</p>
+            <ul>
+                <li>The app must allow users to easily add their entire clothing collection to the app’s catalogue.</>
+                <li>The app must use data from the user and their environment to intelligently make outfit suggestions.</li>
+                <li>The app must use data from the user to make intelligent advertisement selections.</>
+            </ul>
+            <h3>User Flow</h3>
+            <p>I then developed a basic user flow for how the user would interact with my app.</p>
+            <img src="/images/clothing-organiser/clothing_organiser_05.jpg" alt="User Flow Diagram" width="1000">
+            <h3>Brainstorm</h3>
+            <p>
+                Through researching competing apps and considering the pain points that people have with organisation and cataloging
+                their clothing, I created a list of features I could implement into my solution. I chose to focus on an app that helps
+                the user organise and make the best use of their clothing, so these features follow that motif. Thus, I didn’t include
+                any features that would involve a social aspect and turn the app into a form of social media. The features I
+                brainstormed are as follows:
+            </p>
+            <ul>
+                <li><b>Tags:</b> A list of default tags (with the option to add custom tags) that could be used to organise clothing items, specifically ones that pertain to occasions and the weather. For example, tags for work, formal events, date nights, sunny weather, windy weather, cold weather, etc.</li>
+                <li><b>Packing Helper:</b> A feature which automatically builds as many outfits as needed, with as few items as possible, based on the weather conditions in a destination. It would uses tags such as “#comfort” to find the best outfits for the days that the user would actually be travelling on, and present the user with a packing list. This list would then be presented to the user a day before they return to help them ensure they pack all of their items and leave nothing behind.</li>
+                <li><b>Suggested Wears:</b> A suggested range of outfit choices for the day based on current weather conditions.</li>
+                <li><b>Suggested Buys:</b> Suggested items of clothing that the user doesn’t already own and that would pair well with the user’s existing clothes.</li>
+                <li><b>Online Store Integration:</b> Instead of having to photograph all of their items, the user could access a variety of brands’ online stores and tell the app which clothing items they already own. This would speed up the item-adding process and ensure that the items have high quality images.</li>
+                <li><b>Schedules:</b> During onboarding, the app could ask the user for their weekly schedule to gain an idea of what types of clothing they would need on each day. For example, they could define Monday–Thursday as days that require traditional work attire, Friday as a day that requires more casual but still put-together outfits (as many companies will have “casual Fridays”), Saturday as a day for going out to bars, restaurants, and cinemas, and Sunday as a day for lounging around.</li>
+                <li><b>Seasons:</b> The app could sort clothing into 4 different “racks” for Spring, Summer, Fall, and Winter.</li>
+                <li><b>Clothing Types:</b> The app could sort clothing by clothing type, so that shirts, pants, shoes, hats, etc. would be separated and organised. It would have a set of default categories with the option to add custom ones.</li>
+                <li><b>Search/Filtering:</b> Users could search for clothing types, “racks”, or tags to quickly find and filter through clothing items. Suggested buys would populate the search screen below listings of already-owned items.</li>
+                <li><b>Email Integration:</b> By gaining permission to read the user’s emails, the app could automatically and intelligently add clothing the user already owns to its catalogue, from shipping emails and invoices. This would also allow the app to find upcoming travel plans and recommend appropriate clothing to the user.</li>
+                <li><b>Calendar Integration:</b> By gaining permission to read a user’s calendar, the app could search for keywords like “date”, “meeting”, and “dinner” to make more intelligent suggestions of what to wear for each day.</li>
+                <li><b>Value Calculations:</b> Through email invoices or manual data entered by the user, the app could keep track of the price paid for each item of clothing and the amount of times it’s been worn to show the user how much value they’ve got out of each item. It could then use this data to make better suggestions for items to buy.</li>
+                <li><b>Laundry Markers:</b> At the end of the day, the app could ask the user which items from the outfit they wore that day have been placed in the laundry basket or sent for dry-cleaning. These items could then be greyed out in the closet screens on the app. Additionally, until the item has been marked as “clean” again, the app would not suggest any outfits which include that item.</li>
+            </ul>
+
+            <h2>Design</h2>
+            <h3>Sketches</h3>
+            <p>
+                Based on the user flow and personas I formed, I started to ideate the interface of my app through sketches. In the
+                sketch below, I settled on a continuously scrolling feed rather than a tabbed one as I felt it was more in line with a
+                user’s expectations of what a feed is, and it promotes discover-ability for the “Tomorrow” and “Upcoming” sections. I
+                also decided on a Travel screen that didn’t incorporate cards and focused more on imagery than my original iteration. I
+                then used hierarchy to make the dates of the trip the focus, rather than the origin and destination airports, as the
+                former is more relevant to daily planning while the latter is more important in the context of a dedicated travel app.
+            </p>
+            <img src="/images/clothing-organiser/clothing_organiser_06.jpg" alt="Sketches" width="900">
+            <h3>Wireframes</h3>
+            <p>
+                In the wireframes on the next page, I conceptualised my sketches with additional details, better hierarchy and layout,
+                and some additional screens, like the Outfit and Packing List screens. In the Feed, I maintained the horizontally
+                scrolling images while increasing the size of the current one to better show off the details of the clothing. I also
+                kept the weather information, which I hypothesise will further encourage users to open this app first thing in the
+                morning. I changed the content to greet the user and build more of a personal connection with them. I added the Outfit
+                screen, which the user gets to by selecting an outfit from the scrollable images. This shows the individual items of
+                the outfit in more detail. I also fleshed out the Outfit screens, with “Racks” using a regular grid layout to display
+                clothing categories, and both “Outfits” and “Favorites” using a two-column, Pinterest-style layout with each item’s
+                tags displayed below it. The Travel screen went through a few minor changes, including the addition of more
+                conversational content and a wireframed Packing List page.
+            </p>
+            <img src="/images/clothing-organiser/clothing_organiser_07.jpg" alt="Wireframes" width="900">
+            <h2>Final Mockups</h2>
+            <p>
+                In the final mockups, the primary changes I made were formatting changes which created a ber type hierarchy, the
+                addition of imagery and colour, and the usage of custom-made icons.
+            </p>
+            <p>
+                In-App Image Credits: <a href="https://www.instagram.com/alexcosta/">Alex Costa</a>,
+                <a href="https://www.instagram.com/p/BeE96gSnV6l/?taken-by=mrjunho3">MrJunho3</a>,
+                <a href="https://www.instagram.com/awalker4715/">awalker4715</a>,
+                <a href="https://www.instagram.com/mycreativelook/">mycreativelook</a>,
+                <a href="https://www.instagram.com/jaybeezishangintough/">jaybeezishangintough</a>,
+                <a href="https://www.instagram.com/mvmt/">MVMT</a>
+            </p>
+            <img src="/images/clothing-organiser/clothing_organiser_08.jpg" alt="Today and Upcoming Pages" width="1000">
+            <img src="/images/clothing-organiser/clothing_organiser_09.jpg" alt="Upcoming and Suggested Pages" width="1000">
+            <img src="/images/clothing-organiser/clothing_organiser_10.jpg" alt="Outfit Detail and Closet Pages" width="1000">
+            <img src="/images/clothing-organiser/clothing_organiser_11.jpg" alt="Closet Pages" width="1000">
+            <img src="/images/clothing-organiser/clothing_organiser_12.jpg" alt="Travel Pages" width="1000">
+            <h2>Animated Protoypes</h2>
+            <p>These animations are heavily compressed! Click on any image to load its full-resolution version.</p>
+            <img src="/images/clothing-organiser/clothing_organiser_13.jpg" alt="Today Animation" width="600">
+            <img src="/images/clothing-organiser/clothing_organiser_14.jpg" alt="Closet Animation" width="600">
+            <img src="/images/clothing-organiser/clothing_organiser_15.jpg" alt="Travel Animation" width="600">
+            <h2>Final Considerations</h2>
+            <h3>Next Steps</h3>
+            <p>
+                My next steps would be to test my prototype in the hands of real users and use their feedback to iterate on my designs, constantly keeping in mind my original goal of designing “a clothing management app that helps people efficiently and successfully plan an outfit for any occasion”. These tests would be usability tests and, for example, could test how quickly a user can decide on an outfit, how quickly they can add their entire clothing collection to the app’s catalogue, and if they can successfully build and customise a travel-clothing plan. Moreover, I’d like to investigate if three outfits is the ideal number of suggestions—perhaps it results in a low success rate, and five outfits would be ideal.
+            </p>
+            <p>
+                I’d also like to implement the packing list as an image grid to see how effectively that would work, i.e. would users be able to pack faster if they can see the items, or is a list view more efficient? In addition to this, I’d be particularly curious to see the app implemented with gestures and see how natural those gestures are for users. Finally, I’d like to implement a system that allows users to build custom outfits by putting together various clothing items. Perhaps it could be an option on the Closet screen as well as a card that appears once the user has scrolled past their three outfit suggestions for the day.
+            </p>
+            <p>
+                This design challenge forced me to think on my feet with little to no user data, and I found that this encouraged me to challenge my decisions from the get-go.
+            </p>            
+        </div>
+    </div>
+
+    <script>
+        var HamburgerShowing = false;
+
+        function classToggle() {
+            HamburgerShowing = !HamburgerShowing;
+            const navs = document.querySelectorAll('.navbarItems')
+
+            navs.forEach(nav => nav.classList.toggle('navbarToggleShow'));
+            document.querySelector('.navbarHamburger').style.left=HamburgerShowing?"calc(100vw - 150px)":"100vw";
+        }
+    </script>
+
+    <footer>
+        <a href="mailto: yazadd@umich.edu" aria-label="Email"><i class="far fa-envelope-open"></i></a>
+        <a href="https://www.linkedin.com/in/yazadd/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <p>©
+            <script type="text/JavaScript"> document.write(new Date().getFullYear()); </script>, Yazad Dhunjisha</p>
+    </footer>
+
+</body>
+</html>
