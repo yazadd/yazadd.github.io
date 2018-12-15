@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact – Yazad Dhunjisha</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <link rel="stylesheet" type="text/css" href="/styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
+    <link rel="shortcut icon" type="image/png" href="/images/general/favicon.png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <a class="skip-main" href="#main">Skip to main content</a>
+
+    <div class="navbar" role="navigation">
+        <div class="navbarLink">
+            <a href="index.html"><img src="/images/general/logo.png" alt="My Personal Logo" width="50"></a>
+        </div>
+    
+        <div class="navbarLink navbarLinkToggle" onclick="classToggle()">
+            <span>
+                <i class="fas fa-bars"></i>
+            </span>
+        </div>
+    
+        <nav class="navbarItems navbarItemsRight">
+            <div class="navbarLink">
+                <a href="/index.html">Design</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/photography.html">Photography</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/about.html">About</a>
+            </div>
+        </nav>
+    </div>
+    
+    <div class="navbarHamburger" role="navigation">
+        <nav class="navbarItems navbarItemsRight">
+            <div class="navbarLink">
+                <a href="/index.html">Design</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/photography.html">Photography</a>
+            </div>
+            <div class="navbarLink">
+                <a href="/about.html">About</a>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="content" role="main" id="main">
+        <h1>Contact Me</h1>
+
+        <form id="contact-form" action="javascript: submit()">
+            <p>Hi Yazad,</p>
+            <p><label for="your-name">I'm</label>
+                <input type="text" name="your-name" id="your-name" minlength="1" placeholder="John Doe" required> and
+            </p>
+            <p>I'm <label for="your-message">reaching out about</label></p>
+            <p>
+                <textarea name="your-message" id="your-message" placeholder="an amazing opportunity to..." class="expanding" required></textarea>
+            </p>
+            <br><br>
+            <p>
+                You can reach me via <label for="your-email">email</label> at<br>
+                <input type="email" name="your-email" id="your-email" placeholder="johndoe@gmail.com" required>
+            </p>
+            <button type="submit">Send<i class="far fa-paper-plane"></i></button>
+        </form>
+    </div>
+
+    <script>
+        // Hamburger menu
+        var HamburgerShowing = false;
+
+        function classToggle() {
+            HamburgerShowing = !HamburgerShowing;
+            const navs = document.querySelectorAll('.navbarItems')
+
+            navs.forEach(nav => nav.classList.toggle('navbarToggleShow'));
+            document.querySelector('.navbarHamburger').style.left=HamburgerShowing?"calc(100vw - 150px)":"100vw";
+        }
+
+        // Contact form
+        // Auto resize input
+        function resizeInput() {
+            $(this).attr('size', $(this).val().length);
+        }
+
+        $('input[type="text"], input[type="email"]')
+            // event handler
+            .keyup(resizeInput)
+            // resize on page load
+            .each(resizeInput);
+
+        console.clear();
+        // Adapted from georgepapadakis.me/demo/expanding-textarea.html
+        (function () {
+
+            var textareas = document.querySelectorAll('.expanding'),
+
+                resize = function (t) {
+                    t.style.height = 'auto';
+                    t.style.overflow = 'hidden'; // Ensure scrollbar doesn't interfere with the true height of the text.
+                    t.style.height = (t.scrollHeight + t.offset) + 'px';
+                    t.style.overflow = '';
+                },
+
+                attachResize = function (t) {
+                    if (t) {
+                        console.log('t.className', t.className);
+                        t.offset = !window.opera ? (t.offsetHeight - t.clientHeight) : (t.offsetHeight + parseInt(window.getComputedStyle(t, null).getPropertyValue('border-top-width')));
+
+                        resize(t);
+
+                        if (t.addEventListener) {
+                            t.addEventListener('input', function () { resize(t); });
+                            t.addEventListener('mouseup', function () { resize(t); }); // set height after user resize
+                        }
+
+                        t['attachEvent'] && t.attachEvent('onkeyup', function () { resize(t); });
+                    }
+                };
+
+            // IE7 support
+            if (!document.querySelectorAll) {
+
+                function getElementsByClass(searchClass, node, tag) {
+                    var classElements = new Array();
+                    node = node || document;
+                    tag = tag || '*';
+                    var els = node.getElementsByTagName(tag);
+                    var elsLen = els.length;
+                    var pattern = new RegExp("(^|\\s)" + searchClass + "(\\s|$)");
+                    for (i = 0, j = 0; i < elsLen; i++) {
+                        if (pattern.test(els[i].className)) {
+                            classElements[j] = els[i];
+                            j++;
+                        }
+                    }
+                    return classElements;
+                }
+
+                textareas = getElementsByClass('expanding');
+            }
+
+            for (var i = 0; i < textareas.length; i++) {
+                attachResize(textareas[i]);
+            }
+
+        })();
+
+        function submit() {
+                var link = "mailto:yazadd@umich.edu?"
+                    + "&subject=" + "Reaching out"
+                    + "&body=" + "Hi Yazad,%0A%0A I'm " + encodeURIComponent(document.getElementById('your-name').value)
+                    + " and I'm reaching out about " + encodeURIComponent(document.getElementById('your-message').value) + "%0A%0A"
+                    + "You can reach me via email at " + encodeURIComponent(document.getElementById('your-email').value) + "."
+                    + "%0A%0AThanks,%0A" + encodeURIComponent(document.getElementById('your-name').value);
+                    console.log(link);
+                window.location.href = link;
+            }
+
+
+    </script>
+
+    <footer>
+        <a href="mailto: yazadd@umich.edu" aria-label="Email"><i class="far fa-envelope-open"></i></a>
+        <a href="https://www.linkedin.com/in/yazadd/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <p>©
+            <script type="text/JavaScript"> document.write(new Date().getFullYear()); </script>, Yazad Dhunjisha</p>
+    </footer>
+
+</body>
+</html>

@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yazad Dhunjisha</title>
+    <title>About – Yazad Dhunjisha</title>
     <link rel="stylesheet" type="text/css" href="/styles/reset.css">
     <link rel="stylesheet" type="text/css" href="/styles/style.css">
-    <link rel="shortcut icon" type="image/png" href="/images/general/favicon.png"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/styles/button.css">
+    <link rel="shortcut icon" type="image/png" href="/images/general/favicon.png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="aboutHeroImage">
-        <div class="transparentBackground navbar">
-            <div class="navbarLink">
-                <a href="index.html"><img src="images/general/logo.png" alt="My Personal Logo" width="50"></a>
-            </div>
-
-            <div class="navbarLink navbarLinkToggle" onclick="classToggle()">
-                <span style="font-size: 1.8em; color: #888888;">
-                        <i class="fas fa-bars"></i>
-                </span>
-            </div>
-
-            <nav class="navbarItems navbarItemsRight">
-                <div class="navbarLink">
-                    <a href="index.html">Design</a>
-                </div>
-                <div class="navbarLink">
-                    <a href="photography.html">Photography</a>
-                </div>
-                <div class="navbarLinkCurrent">
-                    <a href="about.html">About</a>
-                </div>
-            </nav>
+    <a class="skip-main" href="#main">Skip to main content</a>
+    
+    <div class="navbar" role="navigation">
+        <div class="navbarLink">
+            <a href="index.html"><img src="/images/general/logo.png" alt="My Personal Logo" width="50"></a>
         </div>
-
-        <h1>About</h1>
+    
+        <div class="navbarLink navbarLinkToggle" onclick="classToggle()">
+            <span>
+                <i class="fas fa-bars"></i>
+            </span>
+        </div>
+    
+        <nav class="navbarItems navbarItemsRight">
+            <div class="navbarLink">
+                <a href="index.html">Design</a>
+            </div>
+            <div class="navbarLink">
+                <a href="photography.html">Photography</a>
+            </div>
+            <div class="navbarLinkCurrent">
+                <a href="about.html">About</a>
+            </div>
+        </nav>
     </div>
     
-
-    <div class="navbarHamburger">
+    <div class="navbarHamburger" role="navigation">
         <nav class="navbarItems navbarItemsRight">
             <div class="navbarLink">
                 <a href="index.html">Design</a>
@@ -55,10 +55,18 @@
     </div>
 
 
-    <div>
-        <div class="content" role="main">
-            <img src="images/about/me.jpg" alt="Photo of me in a white shirt and grey waistcoat, leaning against a column" width="300">
-            <p>I’m Yazad, a pixel-pusher with an eye for detail. I’m a designer with a background in engineering, who dabbles in the space between those two disciplines. I design to elevate experiences, to engage people, and to pay rent. If you're interested in working with me or just talking, feel free to reach out!</p>
+    <div class="designImages" role="main" id="main">
+        <h1>About</h1>
+        <img src="/images/about/me.jpg" alt="Photo of me in a white shirt and grey waistcoat, leaning against a column"
+            width="300"><br>
+        <h2>Hello,</h2>
+        <p>
+            I’m Yazad, a pixel-pusher with an eye for detail. I’m a designer with a background in engineering, who dabbles
+            in the space between those two disciplines. I design to elevate experiences, to engage people, and to pay rent.
+            If you're interested in working with me or just talking, feel free to reach out!
+        </p>
+        <div class="buttonDiv">
+            <a href="/contact.html"><span class="button round border">Contact Me</span></a>
         </div>
     </div>
 
@@ -70,9 +78,17 @@
             const navs = document.querySelectorAll('.navbarItems')
 
             navs.forEach(nav => nav.classList.toggle('navbarToggleShow'));
-            document.querySelector('.navbarHamburger').style.left=HamburgerShowing?"calc(100vw - 150px)":"100vw";
+            document.querySelector('.navbarHamburger').style.left = HamburgerShowing ? "calc(100vw - 150px)" : "100vw";
         }
     </script>
 
+    <footer>
+        <a href="mailto: yazadd@umich.edu" aria-label="Email"><i class="far fa-envelope-open"></i></a>
+        <a href="https://www.linkedin.com/in/yazadd/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <p>©
+            <script type="text/JavaScript"> document.write(new Date().getFullYear()); </script>, Yazad Dhunjisha</p>
+    </footer>
+
 </body>
+
 </html>
